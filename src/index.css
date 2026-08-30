@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 9%);
+  --muted: hsl(0, 0%, 96%);
+  --muted-foreground: hsl(0, 0%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 9%);
+  --border: hsl(0, 0%, 89%);
+  --input: hsl(0, 0%, 89%);
+  --primary: hsl(339, 82%, 52%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(0, 0%, 96%);
+  --secondary-foreground: hsl(0, 0%, 9%);
+  --accent: hsl(0, 0%, 96%);
+  --accent-foreground: hsl(0, 0%, 9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(0, 0%, 9%);
+  --radius: 0.5rem;
+  
+  --atrium-charcoal: hsl(0, 0%, 18%);
+  --atrium-gold: hsl(45, 71%, 52%);
+  --atrium-rose: hsl(339, 82%, 52%);
+  --atrium-orange: hsl(17, 72%, 49%);
+  --atrium-beige: hsl(50, 56%, 91%);
+  --atrium-cream: hsl(0, 0%, 98%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(0, 0%, 16%);
+  --muted-foreground: hsl(0, 0%, 65%);
+  --popover: hsl(0, 0%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 16%);
+  --input: hsl(0, 0%, 16%);
+  --primary: hsl(339, 82%, 52%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(0, 0%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 0%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(0, 0%, 83%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+.atrium-charcoal {
+  color: var(--atrium-charcoal);
+}
+
+.bg-atrium-charcoal {
+  background-color: var(--atrium-charcoal);
+}
+
+.atrium-gold {
+  color: var(--atrium-gold);
+}
+
+.bg-atrium-gold {
+  background-color: var(--atrium-gold);
+}
+
+.atrium-rose {
+  color: var(--atrium-rose);
+}
+
+.bg-atrium-rose {
+  background-color: var(--atrium-rose);
+}
+
+.atrium-beige {
+  color: var(--atrium-beige);
+}
+
+.bg-atrium-beige {
+  background-color: var(--atrium-beige);
+}
+
+.atrium-cream {
+  color: var(--atrium-cream);
+}
+
+.bg-atrium-cream {
+  background-color: var(--atrium-cream);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.atrium-logo {
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 900px) {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
